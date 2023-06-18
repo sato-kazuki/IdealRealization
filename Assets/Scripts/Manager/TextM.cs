@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using UnityEditor;
+using UnityEditor.Experimental.RestService;
 using UnityEngine;
 
-public class TextManager : MonoBehaviour
+public class TextM : MonoBehaviour
 {
 
-    private static TextManager instance;
+    private static TextM instance;
 
     private void Awake()
     {
@@ -20,25 +22,28 @@ public class TextManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public static TextManager GetInstance()
+    public static TextM GetInstance()
     {
         return instance;
     }
 
     [SerializeField]
-    ImageManager imageManager;
-    TextFileReader textFileReader;
+    ImageM imageManager;
     TextDisplayer textDisplayer;
+
+    const string filepath = "NovelText";
 
     // Start is called before the first frame update
     void Start()
     {
-        imageManager = ImageManager.GetInstance();
+        TextFileReader.LoadFile(filepath);
+        imageManager = ImageM.GetInstance();
+        textDisplayer = TextDisplayer.GetInstance();
     }
 
     public void UpdateTxt()
     {
-        string txt = textFileReader.OutputText();
+        string txt = TextFileReader.OutputText();
         //[数字]の形式でテキストが送られた場合、それを排した上で
         //数字をImageManagerクラスのUpdateImage()メソッドに渡す
         if (txt != null)
@@ -64,11 +69,4 @@ public class TextManager : MonoBehaviour
 
     }
 
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

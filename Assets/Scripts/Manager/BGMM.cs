@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BGMManager : MonoBehaviour
+public class BGMM : MonoBehaviour
 {
     
-    private static BGMManager instance;
+    private static BGMM instance;
 
     private void Awake(){
         if (instance == null)
@@ -18,7 +18,7 @@ public class BGMManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public static BGMManager GetInstance()
+    public static BGMM GetInstance()
     {
         return instance;
     }

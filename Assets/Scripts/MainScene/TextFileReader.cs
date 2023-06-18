@@ -3,27 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class TextFileReader : MonoBehaviour
+public static class TextFileReader
 {
 
-    private string[] lines;
-    private int lastLineIndex = -1;
-
-    [SerializeField]
-    TextManager textManager;
-
-
-    public void Start(){
-        textManager = TextManager.GetInstance();
-        LoadFile("NovelText");
-    }
+    private static string[] lines;
+    private static int lastLineIndex = -1;
 
 
     /// <summary>
     /// テキストファイル初期読み込み
     /// </summary>
     /// <param name="filePath">読み込みテキストファイル名</param>
-    public void LoadFile(string filePath)
+    public static void LoadFile(string filePath)
     {
         TextAsset textAsset = Resources.Load<TextAsset>(filePath);
         if (textAsset != null)
@@ -43,7 +34,7 @@ public class TextFileReader : MonoBehaviour
     /// <summary>
     /// 次のテキストを渡す
     /// </summary>
-    public string OutputText()
+    public static string OutputText()
     {
         lastLineIndex = Mathf.Min(lastLineIndex + 1, lines.Length - 1);
         string line = lines[lastLineIndex].TrimEnd('\r', '\n', ' ');

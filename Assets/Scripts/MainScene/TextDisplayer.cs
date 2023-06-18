@@ -1,26 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
 
 public class TextDisplayer : MonoBehaviour
 {
+    private static TextDisplayer instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    public static TextDisplayer GetInstance()
+    {
+        return instance;
+    }
+
     [SerializeField]
-    Text chattext;
-    // Start is called before the first frame update
-    void Start()
+    private Text chattext;
+
+    public void TextDisplay(string txt)
     {
-
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void TextDisplay(string txt){
         chattext.text = txt;
     }
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 //using UnityEngine.AddressableAssets;
 
-public class ImageManager : MonoBehaviour
+public class ImageM : MonoBehaviour
 {
 
-    private static ImageManager instance;
+    private static ImageM instance;
 
     private void Awake()
     {
@@ -21,7 +21,7 @@ public class ImageManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public static ImageManager GetInstance()
+    public static ImageM GetInstance()
     {
         return instance;
     }

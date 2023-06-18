@@ -27,17 +27,4 @@ public class BGMManager : MonoBehaviour
     {
         AudioSource audio = this.gameObject.GetComponent<AudioSource>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-// １．audioSorce.clip に AudioClipをセット
-// ２．audioSorce.time に 再生時間(秒）をセット
-// ３．audioSource.Play() で再生
-    // audioSource.clip = audioClip;
-	// audioSource.time = 5f;
-	// audioSource.Play();
-    //
 }

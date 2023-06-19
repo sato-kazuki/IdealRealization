@@ -30,7 +30,7 @@ public class TextM : MonoBehaviour
     ImageM imageManager;
     TextDisplayer displayer;
 
-    const string filepath = "NovelText";
+    private const string filepath = "NovelText";
 
     // Start is called before the first frame update
     void Start()
@@ -49,14 +49,14 @@ public class TextM : MonoBehaviour
         if (txt != null)
         {
             //背景画像変更処理
-            string pattern = @"\[(\d+)\]";
+            string pattern = @"\[(.+)\]";//[BG+文字]を取得して　文字部分を渡したい　要改良
             Match match = Regex.Match(txt, pattern);
             if (match.Success)
             {
-                int number = int.Parse(match.Groups[1].Value);
-                // ImageManagerクラスのメソッドに数字を渡す
-                imageManager.UpdateImage(number);
-                txt = txt.Replace("[" + number.ToString() + "]", "");
+                string imagename = match.Groups[1].Value;
+                // ImageManagerクラスのメソッドに文字列を渡す
+                imageManager.UpdateImage(imagename);
+                txt = txt.Replace("[" + imagename + "]", "");
             }
 
             //テキスト更新処理

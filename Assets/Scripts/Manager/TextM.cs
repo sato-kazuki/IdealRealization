@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEditor;
-using UnityEditor.Experimental.RestService;
 using UnityEngine;
 
 public class TextM : MonoBehaviour
@@ -29,7 +28,7 @@ public class TextM : MonoBehaviour
 
     [SerializeField]
     ImageM imageManager;
-    TextDisplayer textDisplayer;
+    TextDisplayer displayer;
 
     const string filepath = "NovelText";
 
@@ -38,7 +37,8 @@ public class TextM : MonoBehaviour
     {
         TextFileReader.LoadFile(filepath);
         imageManager = ImageM.GetInstance();
-        textDisplayer = TextDisplayer.GetInstance();
+        displayer = this.GetComponent<TextDisplayer>();
+        UpdateTxt();
     }
 
     public void UpdateTxt()
@@ -60,7 +60,8 @@ public class TextM : MonoBehaviour
             }
 
             //テキスト更新処理
-            textDisplayer.TextDisplay(txt);
+            displayer.TextUpdate(txt);
+
         }
         else
         {

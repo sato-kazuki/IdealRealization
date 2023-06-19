@@ -37,7 +37,7 @@ public static class TextFileReader
     public static string OutputText()
     {
         lastLineIndex = Mathf.Min(lastLineIndex + 1, lines.Length - 1);
-        string line = lines[lastLineIndex].TrimEnd('\r', '\n', ' ');
+        string line = lines[lastLineIndex].TrimStart('\r', '\n', ' ').TrimEnd('\r', '\n', ' ');
         Debug.Log(line);
         return line;
     }

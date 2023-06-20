@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.U2D;
+using static Unity.Burst.Intrinsics.X86;
 
 public class BGMM : MonoBehaviour
 {
@@ -24,24 +27,35 @@ public class BGMM : MonoBehaviour
         return instance;
     }
 
-    private const string FILE_PATH = "./Audios/BGM_";
+    private const string FILE_PATH = "Assets/Audios/BGM_";
+    private const string EXTENSION = ".mp3";
+
     AudioSource audiosource;
 
     //pathの取り方調べ中なので暫定
-    [SerializeField]
-    AudioClip bgm1;
-    [SerializeField]
-    AudioClip bgm2;
 
     void Start()
     {
         audiosource = this.gameObject.GetComponent<AudioSource>();
+        //Audioclipの変更テスト
+        //→スタートではアシンクは動かせない
+        //MusicChange("2");
+
     }
 
-    public void MusicChange(string musicname)
+
+    public async void MusicChange(string musicname)
     {
-        string filename = FILE_PATH + musicname;
-        audiosource.clip = bgm2;
+        string filename = FILE_PATH + musicname + EXTENSION;
+        AudioClip afterMusic = await Addressables.LoadAssetAsync<AudioClip>(filename).Task;
+        Debug.Log(filename);
+        if (afterMusic == default)
+        {
+            // defaultであれば、ロードに失敗している
+            Debug.LogError("ロードに失敗しました");
+        }
+        audiosource.clip = afterMusic;
         audiosource.Play();
+        Addressables.Release(afterMusic);
     }
 }

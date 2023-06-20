@@ -1159,5 +1159,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2827f0fe1c1075e4b893870a9ec9d427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgm1: {fileID: 8300000, guid: b8a6bb433ad3d9d46b4cfa0704856bef, type: 3}
-  bgm2: {fileID: 8300000, guid: 0bda6b85a377cd14daacaec0977f1049, type: 3}

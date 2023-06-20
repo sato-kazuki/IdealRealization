@@ -45,7 +45,6 @@ public class ImageM : MonoBehaviour
         Debug.Log(fileName);
         
         Texture2D texture = Resources.Load<Texture2D>(fileName); 
-        Debug.Log(texture); //null
         if (texture != null)
         {
             background.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);

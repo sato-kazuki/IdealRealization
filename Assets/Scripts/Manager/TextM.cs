@@ -49,14 +49,17 @@ public class TextM : MonoBehaviour
         if (txt != null)
         {
             //背景画像変更処理
-            string pattern = @"\[(.+)\]";//[BG+文字]を取得して　文字部分を渡したい　要改良
+            string pattern = @"\[(.+)\]";//[文字列]を取得して渡す
             Match match = Regex.Match(txt, pattern);
             if (match.Success)
             {
+                //loop match.length
+                //if BGM_.+ updatemusic()
+                //if img_.+ updateimage()
                 string imagename = match.Groups[1].Value;
-                // ImageManagerクラスのメソッドに文字列を渡す
-                imageManager.UpdateImage(imagename);
                 txt = txt.Replace("[" + imagename + "]", "");
+                imageManager.UpdateImage(imagename); // ImageManagerクラスのメソッドに文字列を渡す
+
             }
 
             //テキスト更新処理

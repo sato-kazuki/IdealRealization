@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.AddressableAssets;
 
 public static class TextFileReader
 {
@@ -14,9 +15,10 @@ public static class TextFileReader
     /// テキストファイル初期読み込み
     /// </summary>
     /// <param name="filePath">読み込みテキストファイル名</param>
-    public static void LoadFile(string filePath)
+    public static /*async*/ void LoadFile(string filePath)
     {
         TextAsset textAsset = Resources.Load<TextAsset>(filePath);
+        //TextAsset textAsset = await Addressables.LoadAssetAsync<TextAsset>(filePath);
         if (textAsset != null)
         {
             lines = textAsset.text.Split('*');
@@ -30,7 +32,6 @@ public static class TextFileReader
             lines = fileContent.Split('*');
         }
     }
-
     /// <summary>
     /// 次のテキストを渡す
     /// </summary>

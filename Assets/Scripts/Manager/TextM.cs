@@ -55,14 +55,30 @@ public class TextM : MonoBehaviour
             //背景画像変更処理
             string pattern = @"\[(.+)\]";//[文字列]を取得して渡す
             Match match = Regex.Match(txt, pattern);
+
+            //MatchCollection matches = Regex.Matches(txt, pattern);
+            //if(matches.Count > 0)
+            //{
+            //foreach(Match result in match) {
+            //  string spword = result.Value;
+            //}
+            //if BGM_.+ updatemusic()
+            //if bimg_.+ updateimage()
+            //}
+
+
             if (match.Success)
             {
-                //while (match.Groups.length) { }
-                //if BGM_.+ updatemusic()
-                //if bimg_.+ updateimage()
-                string imagename = match.Groups[1].Value;
-                txt = txt.Replace("[" + imagename + "]", "");
-                imageManager.UpdateImage(imagename); // ImageManagerクラスのメソッドに文字列を渡す
+
+                string spword = match.Groups[1].Value;
+
+
+                //string testword = match.Groups[1].Value;
+                //Debug.Log(testword);
+                
+                
+                txt = txt.Replace("[" + spword + "]", "");
+                imageManager.UpdateImage(spword); // ImageManagerクラスのメソッドに文字列を渡す
 
             }
 

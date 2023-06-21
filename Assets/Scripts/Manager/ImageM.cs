@@ -42,7 +42,7 @@ public class ImageM : MonoBehaviour
     public void UpdateImage(string imagename)
     {
         string fileName = "Textures/" + FILE_PREFIX + imagename;
-        Debug.Log(fileName);
+        //Debug.Log(fileName);
         
         Texture2D texture = Resources.Load<Texture2D>(fileName); 
         if (texture != null)

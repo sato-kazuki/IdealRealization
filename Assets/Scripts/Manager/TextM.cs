@@ -30,7 +30,11 @@ public class TextM : MonoBehaviour
     ImageM imageManager;
     TextDisplayer displayer;
 
-    private const string filepath = "NovelText";
+    private const string BGMPATH = "BGM_";
+    private const string BIMGPATH = "BIMG_";
+
+
+    private const string filepath = "Assets/TextData/NovelText.txt";
 
     // Start is called before the first frame update
     void Start()
@@ -53,9 +57,9 @@ public class TextM : MonoBehaviour
             Match match = Regex.Match(txt, pattern);
             if (match.Success)
             {
-                //loop match.length
+                //while (match.Groups.length) { }
                 //if BGM_.+ updatemusic()
-                //if img_.+ updateimage()
+                //if bimg_.+ updateimage()
                 string imagename = match.Groups[1].Value;
                 txt = txt.Replace("[" + imagename + "]", "");
                 imageManager.UpdateImage(imagename); // ImageManagerクラスのメソッドに文字列を渡す

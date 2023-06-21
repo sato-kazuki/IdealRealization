@@ -17,8 +17,8 @@ public static class TextFileReader
     /// <param name="filePath">読み込みテキストファイル名</param>
     public static /*async*/ void LoadFile(string filePath)
     {
-        TextAsset textAsset = Resources.Load<TextAsset>(filePath);
-        //TextAsset textAsset = await Addressables.LoadAssetAsync<TextAsset>(filePath);
+        //TextAsset textAsset = Resources.Load<TextAsset>(filePath);
+        TextAsset textAsset =Addressables.LoadAssetAsync<TextAsset>(filePath).Result;
         if (textAsset != null)
         {
             lines = textAsset.text.Split('*');

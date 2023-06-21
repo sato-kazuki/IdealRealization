@@ -10,20 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Music Assets
+  m_Name: Text Assets
   m_EditorClassIdentifier: 
-  m_GroupName: Music Assets
+  m_GroupName: Text Assets
   m_Data:
     m_SerializedData: []
-  m_GUID: 040979d0bb84d5843bbcb634313b02b0
+  m_GUID: dcd3bb2a1cd39de45a7b848d589ea6cb
   m_SerializeEntries:
-  - m_GUID: b8a6bb433ad3d9d46b4cfa0704856bef
-    m_Address: Assets/Audios/BGM_1.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0bda6b85a377cd14daacaec0977f1049
-    m_Address: Assets/Audios/BGM_2.mp3
+  - m_GUID: 25dd30981ba99f54a8f84b4c0e6c3a1d
+    m_Address: Assets/TextData/NovelText.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -31,5 +26,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: 9f6bb690e3d7edf42a7fa7247ea2611b, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: eff2de8946164ad43bf9113acd04b270, type: 2}
-    - {fileID: 11400000, guid: c3542af3b01a7dc4cb2d49d6d27b66ca, type: 2}
+    - {fileID: 11400000, guid: a9cb2c4d8cd5969428c760fa27d8fb61, type: 2}
+    - {fileID: 11400000, guid: d24cfa3f83d306e41be4a1113c94d3e2, type: 2}

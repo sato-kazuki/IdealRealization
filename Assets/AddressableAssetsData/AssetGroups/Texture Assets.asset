@@ -16,7 +16,42 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: d4535cde38d68cf43bddc32cfabde4e9
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 4dbb5bd112c409941b88ca06de066131
+    m_Address: Assets/Textures/message_back_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48686cb6dd49d8049b7604b0579bb741
+    m_Address: Assets/Textures/title_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0bfc81abf0d0634e8f7c0d61c0a9a33
+    m_Address: Assets/Textures/BIMG_0.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6c27f40ec432c248b91975a440574e0
+    m_Address: Assets/Textures/BIMG_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19e5e99c7140bcf44a458b50ea14e06f
+    m_Address: Assets/Textures/BIMG_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65afc750ef402d84ea9faafe1bf6f87b
+    m_Address: Assets/Textures/BIMG_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ceacec5912590824b8f081dbabdcd086
+    m_Address: Assets/Textures/BIMG_4.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9f6bb690e3d7edf42a7fa7247ea2611b, type: 2}
   m_SchemaSet:

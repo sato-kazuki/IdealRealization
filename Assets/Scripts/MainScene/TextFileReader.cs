@@ -29,7 +29,7 @@ public static class TextFileReader
             StreamReader reader = new StreamReader(filePath);
             string fileContent = reader.ReadToEnd();
             reader.Close();
-            lines = fileContent.Split('*');
+            lines = fileContent.Split("[改行]");
         }
     }
     /// <summary>

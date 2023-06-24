@@ -27,19 +27,17 @@ public class BGMM : MonoBehaviour
         return instance;
     }
 
-    private const string FILE_PATH = "Assets/Audios/BGM_";
+    private const string FILE_PATH = "Assets/Audios/";
     private const string EXTENSION = ".mp3";
 
     AudioSource audiosource;
 
-    //pathの取り方調べ中なので暫定
 
     void Start()
     {
         audiosource = this.gameObject.GetComponent<AudioSource>();
         //Audioclipの変更テスト
-        //→スタートではアシンクは動かせない
-        //MusicChange("2");
+        //→startではasyncは動かせない
 
     }
 

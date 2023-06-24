@@ -14,10 +14,7 @@ public class Newgame : MonoBehaviour
     public void OnButtonClick()
     {
         Debug.Log("NewgameClick");
-        //audioテスト用
-        BGMM bgmManager = BGMM.GetInstance();
-        bgmManager.MusicChange("2");
 
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("TalkScene");
     }
 }

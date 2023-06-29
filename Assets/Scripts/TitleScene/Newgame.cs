@@ -13,8 +13,6 @@ public class Newgame : MonoBehaviour
 
     public void OnButtonClick()
     {
-        Debug.Log("NewgameClick");
-
         SceneManager.LoadScene("TalkScene");
     }
 }

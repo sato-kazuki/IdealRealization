@@ -40,11 +40,10 @@ public class TextM : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TextFileReader.LoadFile(filepath);
+        _ = TextFileReader.LoadFile(filepath, UpdateTxt);
         imageManager = ImageM.GetInstance();
         bgmmanager = BGMM.GetInstance();
         displayer = this.GetComponent<TextDisplayer>();
-        UpdateTxt();
     }
 
     public void UpdateTxt()
@@ -53,17 +52,14 @@ public class TextM : MonoBehaviour
 
         if (txt != null)
         {
-
             txt = TextDistribution(txt);
             //ÉeÉLÉXÉgçXêVèàóù
             displayer.TextUpdate(txt);
-
         }
         else
         {
             Debug.LogError("Failed to get text");
         }
-
     }
 
     /// <summary>
@@ -75,8 +71,7 @@ public class TextM : MonoBehaviour
     public string TextDistribution(string txt)
     {
         //îwåiâÊëúïœçXèàóù
-        string pattern = @"\[(.+)\]";//[ï∂éöóÒ]ÇéÊìæÇµÇƒìnÇ∑
-
+        string pattern = @"\[(.+?)\]";//[ï∂éöóÒ]ÇéÊìæÇµÇƒìnÇ∑
 
         MatchCollection matches = Regex.Matches(txt, pattern);
         if (matches.Count > 0)

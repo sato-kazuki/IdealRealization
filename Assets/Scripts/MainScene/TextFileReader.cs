@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.AddressableAssets;
+using Unity.VisualScripting.FullSerializer;
+using System;
+using System.Threading.Tasks;
 
 public static class TextFileReader
 {
@@ -15,23 +18,26 @@ public static class TextFileReader
     /// テキストファイル初期読み込み
     /// </summary>
     /// <param name="filePath">読み込みテキストファイル名</param>
-    public static /*async*/ void LoadFile(string filePath)
+    public static async Task LoadFile(string filePath,Action action)
     {
-        //TextAsset textAsset = Resources.Load<TextAsset>(filePath);
-        TextAsset textAsset =Addressables.LoadAssetAsync<TextAsset>(filePath).Result;
+        TextAsset textAsset = await Addressables.LoadAssetAsync<TextAsset>(filePath).Task;
+
         if (textAsset != null)
         {
-            lines = textAsset.text.Split('*');
+            lines = textAsset.text.Split("[次ページ]");
         }
         else
         {
             // Resourcesフォルダ内にファイルが存在しない場合は、StreamReaderで読み込む
-            StreamReader reader = new StreamReader(filePath);
+            StreamReader reader = await Addressables.LoadAssetAsync<StreamReader>(filePath).Task;
             string fileContent = reader.ReadToEnd();
             reader.Close();
-            lines = fileContent.Split("[改行]");
+            lines = fileContent.Split("[次ページ]");
+            Debug.Log(lines);
         }
+        action();
     }
+
     /// <summary>
     /// 次のテキストを渡す
     /// </summary>
@@ -39,7 +45,7 @@ public static class TextFileReader
     {
         lastLineIndex = Mathf.Min(lastLineIndex + 1, lines.Length - 1);
         string line = lines[lastLineIndex].TrimStart('\r', '\n', ' ').TrimEnd('\r', '\n', ' ');
-        Debug.Log(line);
+        //Debug.Log(line);
         return line;
     }
 }

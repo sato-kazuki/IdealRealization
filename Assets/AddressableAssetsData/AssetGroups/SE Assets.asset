@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: SE Assets
+  m_EditorClassIdentifier: 
+  m_GroupName: SE Assets
+  m_Data:
+    m_SerializedData: []
+  m_GUID: c2b3778804e4b2048954414f280087f7
+  m_SerializeEntries:
+  - m_GUID: 017300739822a004d86d24eb84584c4d
+    m_Address: "Assets/SE/\u30AB\u30FC\u30BD\u30EB\u79FB\u52D58.mp3"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1120b7118febf94caf698b48c2f801b
+    m_Address: "Assets/SE/\u30AB\u30FC\u30BD\u30EB\u79FB\u52D511.mp3"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f60930a6ea9c844f860309cb896cd5d
+    m_Address: "Assets/SE/\u30AD\u30E3\u30F3\u30BB\u30EB7.mp3"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53c0129fdf942bf4f81996ff9737fe4c
+    m_Address: "Assets/SE/\u6C7A\u5B9A\u30DC\u30BF\u30F3\u3092\u62BC\u305933.mp3"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d842fa68502e49b44bf9310473d90d8e
+    m_Address: "Assets/SE/\u6C7A\u5B9A\u30DC\u30BF\u30F3\u3092\u62BC\u305938.mp3"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48d919ba848fcbb4fb967c940c21108e
+    m_Address: "Assets/SE/\u6C7A\u5B9A\u30DC\u30BF\u30F3\u3092\u62BC\u305943.mp3"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8fe149040044c34baf1db8e4e753259
+    m_Address: "Assets/SE/\u6C7A\u5B9A\u30DC\u30BF\u30F3\u3092\u62BC\u305948.mp3"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 01e8037414513a54cae7c5c896698331
+    m_Address: "Assets/SE/\u6C7A\u5B9A\u30DC\u30BF\u30F3\u3092\u62BC\u305949.mp3"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 9f6bb690e3d7edf42a7fa7247ea2611b, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 3cd0723d3c6879948b7fa6df91ab99e0, type: 2}
+    - {fileID: 11400000, guid: 7c78fa89f4c43ff499ac364c34ab4248, type: 2}

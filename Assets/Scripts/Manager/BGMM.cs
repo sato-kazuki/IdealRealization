@@ -37,8 +37,7 @@ public class BGMM : MonoBehaviour
     {
         audiosource = this.gameObject.GetComponent<AudioSource>();
         //Audioclipの変更テスト
-        //→startではasyncは動かせない
-
+        //→startではasyncは動かせない？
     }
 
 

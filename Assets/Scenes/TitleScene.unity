@@ -463,7 +463,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: produced by Mare
+  m_text: produced by Maire
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 19f4cb04c9e86124c91580016e7a8d7f, type: 2}
   m_sharedMaterial: {fileID: 8805017681229512921, guid: 19f4cb04c9e86124c91580016e7a8d7f, type: 2}
